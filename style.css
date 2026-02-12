@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f8cdda, #fbc2eb);
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    color: #5a2a4a;
+}
+
+.score-box {
+    margin-bottom: 20px;
+    padding: 12px 35px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(255, 182, 193, 0.6);
+    font-weight: bold;
+}
+
+canvas {
+    background: #fff7fa;
+    border: 3px solid #f4a6c1;
+    box-shadow: 0 0 20px rgba(244, 166, 193, 0.5);
+    border-radius: 15px;
+}
+
+.background-shapes {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+}
+
+.shape {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    animation: float 12s infinite linear;
+}
+
+.shape:nth-child(1) {
+    top: 10%;
+    left: 15%;
+}
+
+.shape:nth-child(2) {
+    top: 60%;
+    left: 70%;
+}
+
+.shape:nth-child(3) {
+    top: 30%;
+    left: 40%;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0) rotate(0deg);
+    }
+    to {
+        transform: translateY(-100vh) rotate(360deg);
+    }
+}
+
+#secretBtn {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    opacity: 0; /* невидима */
+    cursor: pointer;
+}
+
+
