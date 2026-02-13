@@ -99,7 +99,7 @@ function checkMessages() {
 
     if (score >= 1402 && !message2Shown) {
         message2Shown = true;
-        alert("???????");
+        alert("password: UCUTE");
     }
 }
 
